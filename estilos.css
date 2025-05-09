@@ -1,0 +1,83 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f5f2;
+  color: #333;
+}
+
+.header {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-content {
+  padding: 2rem;
+}
+
+.image {
+  max-width: 600px;
+  width: 100%;
+  display: block;
+  margin-top: 1rem;
+}
+
+.categoria {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.categoria-1 {
+  background-color: #bfa77f;
+  color: white;
+}
+
+.categoria-2 {
+  background-color: #8c7a6b;
+  color: white;
+}
+
+.footer {
+  background-color: #2c2c2c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
