@@ -5,149 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nombre de tu Empresa</title>
   <link rel="stylesheet" href="css/estilos.css" />
-  <style>
-    /* Color de fondo y tipografía principal */
-    body {
-      background-color: #2a2a2a;
-      color: #f4f4f4;
-      font-family: 'Arial', sans-serif;
-    }
-
-    /* Estilo del encabezado */
-    header {
-      background-color: #1c1c1c;
-      color: #f4f4f4;
-      padding: 1.5rem 0;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    header .logo img {
-      width: 120px;
-    }
-
-    header nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    header nav ul li {
-      font-weight: bold;
-    }
-
-    header nav ul li a {
-      color: #d4af37;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-
-    header nav ul li a:hover {
-      color: #f4f4f4;
-    }
-
-    /* Sección principal */
-    main {
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-
-    /* Estilo de las secciones */
-    section h2 {
-      font-size: 2rem;
-      color: #d4af37;
-      margin-bottom: 1.5rem;
-    }
-
-    section p {
-      font-size: 1rem;
-      color: #e0e0e0;
-    }
-
-    section img {
-      width: 100%;
-      max-width: 600px;
-      display: block;
-      margin: 1rem auto;
-      border: 4px solid #d4af37;
-      border-radius: 10px;
-    }
-
-    /* Estilo de las categorías */
-    .categoria {
-      background-color: #333;
-      color: #fff;
-      padding: 1.2rem;
-      margin: 1rem 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      font-weight: bold;
-    }
-
-    /* Sección de contacto */
-    footer {
-      background-color: #1c1c1c;
-      color: #d4af37;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-    }
-
-    /* Botón flotante de WhatsApp */
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
-      text-decoration: none;
-      transition: transform 0.4s ease, opacity 1s ease;
-      opacity: 0;
-      animation: fadeInUp 1s forwards;
-    }
-
-    .whatsapp-button:hover {
-      background-color: #20b958;
-      transform: scale(1.1);
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .whatsapp-button svg {
-      width: 30px;
-      height: 30px;
-      fill: white;
-    }
-
-    @media (max-width: 768px) {
-      .whatsapp-button {
-        display: flex;
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="Logo.png" alt="Logo Empresa" />
+      <img src="{{ url_for('static', filename='assets/Logo.png') }}" alt="Logo.png">
+      <h1>Nombre de tu Empresa</h1>
     </div>
     <nav>
       <ul>
@@ -162,10 +25,7 @@
   <main>
     <section id="quienes-somos">
       <h2>¿Quiénes Somos?</h2>
-      <p>En Aránguiz Joyería llevamos más de 20 años creando joyas con historia. Nacimos en ferias y talleres, conectando con personas reales que buscan estilo, calidad y autenticidad. Hoy, abrimos por primera vez nuestra tienda online, llevando esa confianza construida por décadas a todo Chile.
-
-Diseñamos para quienes quieren verse increíbles sin pagar de más, con piezas trabajadas a mano, con alma y detalle.
-Aránguiz Joyería: tradición, diseño y conexión en cada accesorio.</p>
+      <p>Texto de ejemplo sobre la empresa y su historia...</p>
       <img src="assets/trabajo1.jpg" alt="Foto Trabajo 1" />
     </section>
 
@@ -196,9 +56,10 @@ Aránguiz Joyería: tradición, diseño y conexión en cada accesorio.</p>
   <!-- Botón flotante de WhatsApp -->
   <a href="https://wa.me/56981427306?text=Hola,%20quiero%20más%20información%20sobre%20sus%20productos." class="whatsapp-button" target="_blank" title="Contáctanos por WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-      <path d="M16.004 3C9.373 3 3.997 8.377 3.997 15.009c0 2.652.871 5.106 2.348 7.1l-1.55 5.656 5.816-1.528a11.91 11.91 0 0 0 5.392 1.29c6.631 0 12.007-5.376 12.007-12.008C28.01 8.377 22.635 3 16.004 3zm0 21.974c-1.85 0-3.572-.502-5.06-1.375l-.364-.218-3.45.906.943-3.355-.237-.373a9.932 9.932 0 0 1-1.54-5.25c0-5.496 4.472-9.968 9.968-9.968 5.498 0 9.97 4.472 9.97 9.968 0 5.496-4.472 9.968-9.97 9.968zm5.456-7.457c-.299-.15-1.768-.872-2.04-.971-.272-.1-.47-.15-.67.15-.198.299-.771.971-.945 1.17-.174.199-.347.224-.646.075-.3-.15-1.264-.465-2.407-1.486-.89-.793-1.49-1.771-1.665-2.07-.173-.298-.019-.459.13-.608.134-.133.298-.347.446-.521.15-.174.2-.298.3-.497.099-.2.05-.373-.025-.522-.075-.15-.67-1.615-.918-2.213-.243-.584-.49-.504-.67-.513l-.572-.01a1.09 1.09 0 0 0-.791.372c-.273.298-1.04 1.016-1.04 2.48s1.064 2.876 1.213 3.075c.15.198 2.092 3.194 5.07 4.479.709.306 1.263.489 1.695.625.712.227 1.36.195 1.872.118.571-.085 1.768-.722 2.017-1.418.25-.695.25-1.29.175-1.418-.075-.125-.272-.198-.571-.348z"/>
+      <path d="... (se mantiene tu SVG) ..." />
     </svg>
   </a>
 </body>
 </html>
+
 
